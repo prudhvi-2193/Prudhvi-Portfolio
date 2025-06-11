@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prudhvi Sai Dodda - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    .navbar {
+      transition: background-color 0.3s ease;
+    }
+    .navbar.scrolled {
+      background-color: rgba(17, 24, 39, 0.9);
+    }
+    .section {
+      min-height: 100vh;
+      padding: 4rem 1rem;
+    }
+    .skill-card, .experience-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-card:hover, .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .hero-section {
+      background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      transform: translateY(0);
+      transition: transform 0.5s ease-in-out;
+    }
+    .hero-content:hover {
+      transform: translateY(-10px);
+    }
+    .quote-text {
+      font-style: italic;
+      border-left: 4px solid #fff;
+      padding-left: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+    .skill-item {
+      text-align: center;
+      padding: 1rem;
+      background: #f9fafb;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .skill-item:hover {
+      transform: scale(1.1);
+    }
+    .contact-icons a {
+      margin: 0 1rem;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+    .contact-icons a:hover {
+      color: #3b82f6;
+    }
+    .about-box {
+      display: flex;
+      align-items: center;
+      max-width: 2xl mx-auto;
+    }
+    .about-image {
+      width: 200px;
+      height: 200px;
+      background: url('https://via.placeholder.com/200') no-repeat center center/cover;
+      margin-right: 2rem;
+    }
+    .about-content {
+      flex: 1;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar fixed top-0 w-full bg-gray-900 text-white p-4 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">Prudhvi Sai Dodda</a>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="#experience" class="hover:text-blue-400">Experience</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="section hero-section relative">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center max-w-3xl mx-auto text-white">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Prudhvi Sai Dodda</h1>
+      <p class="text-xl md:text-2xl mb-8">A glimpse of me: "Turning data into stories that drive decisions."</p>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300">Let's Collaborate</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-600 text-center">About Me</h2>
+      <div class="about-box">
+        <div class="about-image"></div>
+        <div class="about-content bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg shadow-lg">
+          <p class="text-lg leading-relaxed text-gray-700">
+            I am a Master’s in Computer Science graduate from Southern Illinois University with a stellar 4.0 GPA and over 2+ years of real-time experience in data analytics and software development. My journey has equipped me with a robust skill set, and I am passionately seeking opportunities as a <span class="text-blue-500 font-semibold">Data Analyst</span> and <span class="text-blue-500 font-semibold">Data Scientist</span>. I thrive on transforming complex datasets into actionable insights and innovative solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-600">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="mb-2">Python</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sql.png" alt="SQL" class="mb-2">SQL</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c-plus-plus.png" alt="C++" class="mb-2">C++</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c.png" alt="C" class="mb-2">C</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/java.png" alt="Java" class="mb-2">Java</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/html-5.png" alt="HTML" class="mb-2">HTML</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/css3.png" alt="CSS" class="mb-2">CSS</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="Angular" class="mb-2">Angular</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/opencv.png" alt="OpenCV" class="mb-2">OpenCV</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/pandas.png" alt="Pandas" class="mb-2">Pandas</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/scikit-learn.png" alt="Sci-kit" class="mb-2">Sci-kit</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/tensor-flow.png" alt="TensorFlow" class="mb-2">TensorFlow</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/seaborn.png" alt="Seaborn" class="mb-2">Seaborn</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/pyspark.png" alt="PySpark" class="mb-2">PySpark</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask" class="mb-2">Flask</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/git.png" alt="Git" class="mb-2">Git</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/apache-spark.png" alt="Apache Spark" class="mb-2">Apache Spark</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/databricks.png" alt="Databricks" class="mb-2">Databricks</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/docker.png" alt="Docker" class="mb-2">Docker</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="PowerBi" class="mb-2">PowerBi</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/kubernetes.png" alt="Kubernetes" class="mb-2">Kubernetes</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/aws.png" alt="AWS" class="mb-2">AWS</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="GCP" class="mb-2">Google Cloud Platform</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/azure.png" alt="Azure" class="mb-2">Microsoft Azure Analytics</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/machine-learning.png" alt="Machine Learning" class="mb-2">Machine Learning</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/data-analysis.png" alt="Data Analysis" class="mb-2">Data Analysis</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/deep-learning.png" alt="Deep Learning" class="mb-2">Deep Learning</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/nlp.png" alt="NLP" class="mb-2">NLP</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sentiment-analysis.png" alt="Sentiment Analysis" class="mb-2">Sentiment Analysis</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/computer-vision.png" alt="Computer Vision" class="mb-2">Computer Vision</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/mlops.png" alt="MLOps" class="mb-2">MLOps</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/big-data.png" alt="Big Data Analytics" class="mb-2">Big Data Analytics</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/clustering.png" alt="Clustering" class="mb-2">Clustering</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/anomaly-detection.png" alt="Anomaly Detection" class="mb-2">Anomaly Detection</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-600">Experience</h2>
+      <div class="grid grid-cols-1 gap-6">
+        <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+          <h3 class="text-xl font-semibold mb-2">Data Analyst Intern, Komatsu</h3>
+          <p class="text-sm text-gray-600 mb-2">May 2024 - Jan 2025 | Franklin, PA</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Developed Power BI dashboards with downloadable visuals, enhancing decision-making for 30+ stakeholders.</li>
+            <li>Created a PHP and SQL-based website with real-time Power BI visuals and user profiles for 10+ companies.</li>
+            <li>Automated PDF reports, cutting processing time by 20% with adaptive features.</li>
+            <li>Defined 3 KPIs, reporting daily progress to ensure project alignment and delivery.</li>
+          </ul>
+        </div>
+        <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+          <h3 class="text-xl font-semibold mb-2">Web Developer (Part-time), WSIU</h3>
+          <p class="text-sm text-gray-600 mb-2">Feb 2024 - May 2025 | Carbondale, IL</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Optimized web pages with Angular and Flask, boosting engagement by 15% via Google Analytics.</li>
+            <li>Analyzed traffic data to guide content optimization, reaching 500+ monthly users.</li>
+            <li>Aligned web content with data-driven strategies, supporting 5+ marketing campaigns.</li>
+          </ul>
+        </div>
+        <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+          <h3 class="text-xl font-semibold mb-2">Data Scientist, Tata Consultancy Services</h3>
+          <p class="text-sm text-gray-600 mb-2">May 2022 - Aug 2023 | Hyderabad</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Built a churn prediction model with 87% accuracy using Python, Scikit-learn, and XGBoost.</li>
+            <li>Preprocessed 100K+ records with Pandas and SQL for high-quality model training.</li>
+            <li>Improved model accuracy by 10% through feature engineering and tuning.</li>
+            <li>Deployed model via Flask API, reducing churn by 12% for 25+ clients with Power BI visuals.</li>
+          </ul>
+        </div>
+        <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md text-left">
+          <h3 class="text-xl font-semibold mb-2">Data Analyst, Smart Internz</h3>
+          <p class="text-sm text-gray-600 mb-2">Jun 2021 - Aug 2021 | Remote</p>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Preprocessed 1K+ patient records with Python and Pandas, improving data quality.</li>
+            <li>Developed a heart failure prediction model with 83% accuracy using machine learning.</li>
+            <li>Evaluated models with metrics and analysis to select the optimal solution.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-red-600">Contact Me</h2>
+      <p class="text-lg max-w-xl mx-auto mb-6 text-gray-700">
+        I’m excited to connect for opportunities in data analytics and science—let’s create something impactful together!
+      </p>
+      <div class="contact-icons flex justify-center items-center space-x-6">
+        <a href="mailto:dodda.prudhvi55@gmail.com" class="text-gray-600 hover:text-blue-600"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/prudhvi-dodda" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/prudhvi-dodda" class="text-gray-600 hover:text-blue-600"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center p-4">
+    <p>© 2025 Prudhvi Sai Dodda. All rights reserved.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
