@@ -25,9 +25,15 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .hero-section {
-      background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
       position: relative;
       overflow: hidden;
+      animation: gradientAnimation 10s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     .hero-overlay {
       position: absolute;
@@ -40,6 +46,8 @@
     .hero-content {
       position: relative;
       z-index: 1;
+      padding: 2rem;
+      text-align: center;
       transform: translateY(0);
       transition: transform 0.5s ease-in-out;
     }
@@ -69,27 +77,82 @@
     .skill-item:hover {
       transform: scale(1.1);
     }
-    .contact-icons a {
-      margin: 0 1rem;
-      font-size: 2rem;
-      transition: color 0.3s ease;
-    }
-    .contact-icons a:hover {
-      color: #3b82f6;
-    }
     .about-box {
       display: flex;
       align-items: center;
       max-width: 2xl mx-auto;
+      padding: 1rem;
     }
     .about-image {
       width: 200px;
-      height: 200px;
-      background: url('https://via.placeholder.com/200') no-repeat center center/cover;
+      height: 300px;
+      background: url('https://example.com/your-image-url.jpg') no-repeat center center/cover;
       margin-right: 2rem;
+      border: 2px solid #e5e7eb;
     }
     .about-content {
       flex: 1;
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #6b7280, #1e293b);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    .connect-button {
+      background: #00b4d8;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .connect-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 180, 216, 0.5);
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      text-align: left;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .contact-item:hover {
+      transform: translateY(-5px);
+    }
+    .contact-item i {
+      margin-right: 0.5rem;
+      color: #00b4d8;
+    }
+    .contact-item a {
+      color: #00b4d8;
+      text-decoration: none;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+    .motivational-quote {
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #a3bffa;
+      animation: fadeIn 3s infinite alternate;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -138,40 +201,40 @@
     <div class="container mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-600">Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="mb-2">Python</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sql.png" alt="SQL" class="mb-2">SQL</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c-plus-plus.png" alt="C++" class="mb-2">C++</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c.png" alt="C" class="mb-2">C</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/java.png" alt="Java" class="mb-2">Java</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/html-5.png" alt="HTML" class="mb-2">HTML</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/css3.png" alt="CSS" class="mb-2">CSS</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="Angular" class="mb-2">Angular</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/opencv.png" alt="OpenCV" class="mb-2">OpenCV</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/pandas.png" alt="Pandas" class="mb-2">Pandas</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/scikit-learn.png" alt="Sci-kit" class="mb-2">Sci-kit</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/tensor-flow.png" alt="TensorFlow" class="mb-2">TensorFlow</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/seaborn.png" alt="Seaborn" class="mb-2">Seaborn</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/pyspark.png" alt="PySpark" class="mb-2">PySpark</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask" class="mb-2">Flask</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/git.png" alt="Git" class="mb-2">Git</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/apache-spark.png" alt="Apache Spark" class="mb-2">Apache Spark</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/databricks.png" alt="Databricks" class="mb-2">Databricks</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/docker.png" alt="Docker" class="mb-2">Docker</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="PowerBi" class="mb-2">PowerBi</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/kubernetes.png" alt="Kubernetes" class="mb-2">Kubernetes</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/aws.png" alt="AWS" class="mb-2">AWS</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="GCP" class="mb-2">Google Cloud Platform</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/azure.png" alt="Azure" class="mb-2">Microsoft Azure Analytics</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/machine-learning.png" alt="Machine Learning" class="mb-2">Machine Learning</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/data-analysis.png" alt="Data Analysis" class="mb-2">Data Analysis</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/deep-learning.png" alt="Deep Learning" class="mb-2">Deep Learning</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/nlp.png" alt="NLP" class="mb-2">NLP</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sentiment-analysis.png" alt="Sentiment Analysis" class="mb-2">Sentiment Analysis</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/computer-vision.png" alt="Computer Vision" class="mb-2">Computer Vision</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/mlops.png" alt="MLOps" class="mb-2">MLOps</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/big-data.png" alt="Big Data Analytics" class="mb-2">Big Data Analytics</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/clustering.png" alt="Clustering" class="mb-2">Clustering</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/anomaly-detection.png" alt="Anomaly Detection" class="mb-2">Anomaly Detection</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">Python</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sql.png" alt="SQL">SQL</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c-plus-plus.png" alt="C++">C++</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c.png" alt="C">C</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/java.png" alt="Java">Java</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/html-5.png" alt="HTML">HTML</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/css3.png" alt="CSS">CSS</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="Angular">Angular</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/opencv.png" alt="OpenCV">OpenCV</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/pandas.png" alt="Pandas">Pandas</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/scikit-learn.png" alt="Sci-kit">Sci-kit</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/tensor-flow.png" alt="TensorFlow">TensorFlow</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/seaborn.png" alt="Seaborn">Seaborn</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/pyspark.png" alt="PySpark">PySpark</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask">Flask</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/git.png" alt="Git">Git</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/apache-spark.png" alt="Apache Spark">Apache Spark</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/database.png" alt="Databricks">Databricks</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/docker.png" alt="Docker">Docker</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="PowerBi">PowerBi</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/kubernetes.png" alt="Kubernetes">Kubernetes</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/aws.png" alt="AWS">AWS</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="Google Cloud Platform">Google Cloud Platform</div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/azure.png" alt="Microsoft Azure Analytics">Microsoft Azure Analytics</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/machine-learning.png" alt="Machine Learning">Machine Learning</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/data-analysis.png" alt="Data Analysis">Data Analysis</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/deep-learning.png" alt="Deep Learning">Deep Learning</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/nlp.png" alt="NLP">NLP</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sentiment-analysis.png" alt="Sentiment Analysis">Sentiment Analysis</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/computer-vision.png" alt="Computer Vision">Computer Vision</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/devops.png" alt="MLOps">MLOps</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/big-data.png" alt="Big Data Analytics">Big Data Analytics</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/clustering.png" alt="Clustering">Clustering</div>
+        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/anomaly-detection.png" alt="Anomaly Detection">Anomaly Detection</div>
       </div>
     </div>
   </section>
@@ -224,16 +287,31 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section bg-gray-100">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-red-600">Contact Me</h2>
-      <p class="text-lg max-w-xl mx-auto mb-6 text-gray-700">
-        I’m excited to connect for opportunities in data analytics and science—let’s create something impactful together!
-      </p>
-      <div class="contact-icons flex justify-center items-center space-x-6">
-        <a href="mailto:dodda.prudhvi55@gmail.com" class="text-gray-600 hover:text-blue-600"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/prudhvi-dodda" class="text-gray-600 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/prudhvi-dodda" class="text-gray-600 hover:text-blue-600"><i class="fab fa-github"></i></a>
+  <section id="contact" class="section">
+    <div class="container mx-auto">
+      <div class="contact-section">
+        <a href="#contact" class="connect-button">Let's Connect! 🌟</a>
+        <div class="contact-info mt-6">
+          <div class="contact-item">
+            <p><i class="fas fa-user"></i> <strong>NAME 👤</strong></p>
+            <p>Prudhvi Sai Dodda</p>
+          </div>
+          <div class="contact-item">
+            <p><i class="fas fa-envelope"></i> <strong>EMAIL ✉️</strong></p>
+            <p><a href="mailto:dodda.prudhvi55@gmail.com">dodda.prudhvi55@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <p><i class="fas fa-phone"></i> <strong>PHONE 📞</strong></p>
+            <p><a href="tel:+16184342565">+1 (618) 434-2565</a></p>
+          </div>
+          <div class="contact-item">
+            <p><i class="fab fa-linkedin"></i> <strong>LINKEDIN 🔗</strong></p>
+            <p><a href="https://www.linkedin.com/in/prudhvi-sai-dodda/">linkedin.com/in/prudhvi-sai-dodda</a></p>
+          </div>
+        </div>
+        <div class="motivational-quote">
+          "Unlock the power of data—together, we can shape the future! 🚀"
+        </div>
       </div>
     </div>
   </section>
@@ -265,5 +343,3 @@
       }
     });
   </script>
-</body>
-</html>
