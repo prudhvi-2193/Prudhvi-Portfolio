@@ -6,6 +6,7 @@
   <title>Prudhvi Sai Dodda - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     .navbar {
       transition: background-color 0.3s ease;
@@ -76,6 +77,10 @@
     }
     .skill-item:hover {
       transform: scale(1.1);
+    }
+    .skill-item i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
     .about-box {
       display: flex;
@@ -201,40 +206,40 @@
     <div class="container mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-600">Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">Python</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sql.png" alt="SQL">SQL</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c-plus-plus.png" alt="C++">C++</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/c.png" alt="C">C</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/java.png" alt="Java">Java</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/html-5.png" alt="HTML">HTML</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/css3.png" alt="CSS">CSS</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="Angular">Angular</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/opencv.png" alt="OpenCV">OpenCV</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/pandas.png" alt="Pandas">Pandas</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/scikit-learn.png" alt="Sci-kit">Sci-kit</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/tensor-flow.png" alt="TensorFlow">TensorFlow</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/seaborn.png" alt="Seaborn">Seaborn</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/pyspark.png" alt="PySpark">PySpark</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask">Flask</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/git.png" alt="Git">Git</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/apache-spark.png" alt="Apache Spark">Apache Spark</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/database.png" alt="Databricks">Databricks</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/docker.png" alt="Docker">Docker</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="PowerBi">PowerBi</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/kubernetes.png" alt="Kubernetes">Kubernetes</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/aws.png" alt="AWS">AWS</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="Google Cloud Platform">Google Cloud Platform</div>
-        <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/azure.png" alt="Microsoft Azure Analytics">Microsoft Azure Analytics</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/machine-learning.png" alt="Machine Learning">Machine Learning</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/data-analysis.png" alt="Data Analysis">Data Analysis</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/deep-learning.png" alt="Deep Learning">Deep Learning</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/nlp.png" alt="NLP">NLP</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/sentiment-analysis.png" alt="Sentiment Analysis">Sentiment Analysis</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/computer-vision.png" alt="Computer Vision">Computer Vision</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/devops.png" alt="MLOps">MLOps</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/big-data.png" alt="Big Data Analytics">Big Data Analytics</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/clustering.png" alt="Clustering">Clustering</div>
-        <div class="skill-item"><img src="https://img.icons8.com/ios-filled/48/000000/anomaly-detection.png" alt="Anomaly Detection">Anomaly Detection</div>
+        <div class="skill-item"><i class="fas fa-python"></i> Python</div>
+        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+        <div class="skill-item"><i class="fas fa-code"></i> C++</div>
+        <div class="skill-item"><i class="fas fa-code"></i> C</div>
+        <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+        <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+        <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+        <div class="skill-item"><i class="fab fa-angular"></i> Angular</div>
+        <div class="skill-item"><i class="fas fa-camera"></i> OpenCV</div>
+        <div class="skill-item"><i class="fas fa-table"></i> Pandas</div>
+        <div class="skill-item"><i class="fas fa-flask"></i> Sci-kit</div>
+        <div class="skill-item"><i class="fas fa-brain"></i> TensorFlow</div>
+        <div class="skill-item"><i class="fas fa-chart-line"></i> Seaborn</div>
+        <div class="skill-item"><i class="fas fa-fire"></i> PySpark</div>
+        <div class="skill-item"><i class="fas fa-flask"></i> Flask</div>
+        <div class="skill-item"><i class="fab fa-git"></i> Git</div>
+        <div class="skill-item"><i class="fas fa-bolt"></i> Apache Spark</div>
+        <div class="skill-item"><i class="fas fa-database"></i> Databricks</div>
+        <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+        <div class="skill-item"><i class="fas fa-chart-pie"></i> PowerBi</div>
+        <div class="skill-item"><i class="fas fa-cubes"></i> Kubernetes</div>
+        <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+        <div class="skill-item"><i class="fas fa-cloud"></i> Google Cloud Platform</div>
+        <div class="skill-item"><i class="fab fa-microsoft"></i> Microsoft Azure Analytics</div>
+        <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
+        <div class="skill-item"><i class="fas fa-chart-bar"></i> Data Analysis</div>
+        <div class="skill-item"><i class="fas fa-network-wired"></i> Deep Learning</div>
+        <div class="skill-item"><i class="fas fa-language"></i> NLP</div>
+        <div class="skill-item"><i class="fas fa-heartbeat"></i> Sentiment Analysis</div>
+        <div class="skill-item"><i class="fas fa-eye"></i> Computer Vision</div>
+        <div class="skill-item"><i class="fas fa-cogs"></i> MLOps</div>
+        <div class="skill-item"><i class="fas fa-server"></i> Big Data Analytics</div>
+        <div class="skill-item"><i class="fas fa-object-group"></i> Clustering</div>
+        <div class="skill-item"><i class="fas fa-exclamation-triangle"></i> Anomaly Detection</div>
       </div>
     </div>
   </section>
